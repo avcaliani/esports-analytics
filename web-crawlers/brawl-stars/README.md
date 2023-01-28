@@ -17,6 +17,27 @@ python -m venv .venv \
 poetry install
 ```
 
+### Executing Locally
+
+```bash
+make local
+```
+
+### Deploy
+
+```bash
+make deploy
+```
+
+### Deleting Function
+
+```bash
+make destroy
+```
+
 ### References
 
+- [GCloud - Cloud Function in Python](https://codelabs.developers.google.com/codelabs/cloud-functions-python-http)
 - [Brawl Stars - Developer Docs](https://developer.brawlstars.com)
+- Articles
+  - [Cloud Functions Best Practices](https://medium.com/google-cloud/cloud-functions-best-practices-1-4-get-the-environment-ready-af666af89f62)
