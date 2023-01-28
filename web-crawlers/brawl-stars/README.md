@@ -17,25 +17,39 @@ python -m venv .venv \
 poetry install
 ```
 
-### Executing Locally
+**🦥 Executing the cloud function locally.**  
+In this project the API Token is associated with your own IP Address.  
+Here it is how you can get your own IP.
+
+```bash
+echo "🌎 Current IP: $(curl -s http://ipinfo.io/ip)"
+```
+
+Then you can update your token using the following code...
+
+```bash
+API_TOKEN="<your_token>"
+```
+
+Finally, excute the function locally.
 
 ```bash
 make local
 ```
 
-### Deploy
+🚀 **Deploying** the cloud function.
 
 ```bash
 make deploy
 ```
 
-### Deleting Function
+🗑 **Deleting** the cloud function.
 
 ```bash
 make destroy
 ```
 
-### References
+## References
 
 - [GCloud - Cloud Function in Python](https://codelabs.developers.google.com/codelabs/cloud-functions-python-http)
 - [Brawl Stars - Developer Docs](https://developer.brawlstars.com)

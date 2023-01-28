@@ -17,6 +17,7 @@ local: gen-requirements
 	functions-framework --target=main --debug
 
 deploy: gen-requirements
+	# https://cloud.google.com/sdk/gcloud/reference/functions/deploy
 	@echo "deploy"
 
 destroy:
