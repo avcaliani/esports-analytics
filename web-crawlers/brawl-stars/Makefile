@@ -5,9 +5,13 @@ REGION_NAME = "us-east1"
 FUNCTION_NAME = "web-crawler-brawl-stars"
 
 list:
+	@echo "🌎 Cloud Functions"
 	gcloud functions list \
 		--regions=$(REGION_NAME) \
 		--project=$(PROJECT_NAME)
+	
+	@echo "🗃️ Files"
+	gsutil ls -r gs://nth-analytics-lake 
 
 gen-requirements:
 	rm -rf requirements.txt
