@@ -30,10 +30,18 @@ In this section you will find everything I did to up this project to Google Clou
 - Create two buckets:
   - `<project_name>-lake` 👉 Bucket to be your data lake.
   - `<project_name>-terraform` 👉 Bucket to store Terraform state.
+- Enable some Google APIs
 - Install a few things:
   - [Google Cloud CLI]
   - [Terraform]
   - [Poetry]
+
+### Copy Function Code to GCloud Bucket
+
+```bash
+cd web-crawlers/brawl-stars \
+    && make deploy
+```
 
 ### Terraform Configuration
 

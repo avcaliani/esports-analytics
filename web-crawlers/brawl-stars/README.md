@@ -28,6 +28,7 @@ echo "🌎 Current IP: $(curl -s http://ipinfo.io/ip)"
 Then you can update your token using the following code...
 
 ```bash
+export BUCKET_NAME="<your_bucket>"
 export API_TOKEN="<your_token>"
 ```
 

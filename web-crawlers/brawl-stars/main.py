@@ -11,11 +11,11 @@ API_HEADERS = {
 }
 
 PLAYERS = [
-    "#8U098L8",  # me
+    "#8U098L8",
     "#8GGQG8YQ",
     "#2G8LVJU2Y",
     "#PU8G9VCV",
-    "#PLYU9GLP",
+    "#8CQGCY9",
 ]
 
 
@@ -34,7 +34,7 @@ def write_file(responses: list) -> Optional[str]:
     if not responses:
         return None
     return cloud.write(
-        bucket="nth-analytics-lake",
+        bucket=environ.get("BUCKET_NAME"),
         file_prefix="raw/brawl-stars/players/players",
         data=responses
     )
