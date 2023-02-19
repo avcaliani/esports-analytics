@@ -102,7 +102,7 @@ In this project our data pipeline was developed using [Apache Spark] and the dat
 
 More details about the pipeline, like how to execute it, can be found in this [README](data-pipelines/brawl-stars/README.md)
 
-## Deleting Resources
+### Deleting Resources
 
 Finally, if you want to **delete** the project and all the resources create by terraform, you can simply execute...
 
