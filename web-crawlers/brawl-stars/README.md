@@ -2,7 +2,7 @@
 
 ![#](https://img.shields.io/badge/python-3.10.6-blue.svg?logo=python&logoColor=white)
 
-## Quick Start
+## 🛫 Quick Start
 
 ```bash
 # 👇 Setting PyEnv version
@@ -17,7 +17,7 @@ python -m venv .venv \
 poetry install
 ```
 
-**🦥 Executing the cloud function locally.**  
+🧰 Executing the cloud function **locally**.  
 In this project the API Token is associated with your own IP Address.  
 Here it is how you can get your own IP.
 
@@ -25,7 +25,9 @@ Here it is how you can get your own IP.
 echo "🌎 Current IP: $(curl -s http://ipinfo.io/ip)"
 ```
 
-Then you can update your token using the following code...
+Then you can update [your token] using the following code...
+
+[your token]: https://developer.brawlstars.com/#/account
 
 ```bash
 export BUCKET_NAME="<your_bucket>"
@@ -38,17 +40,22 @@ Finally, excute the function locally.
 make local
 ```
 
-🚀 **Deploying** the cloud function.
+## 🚀 Deploy
+
+To deploy the cloud function, execute...
 
 ```bash
 make deploy
 ```
 
-🗑 **Deleting** the cloud function.
+If you are **updating** the cloud function code, after `make deploy` you have to...
 
 ```bash
-make destroy
+cd ../../terraform &&
+  terraform apply -replace=google_cloudfunctions_function.supercell_bstars_function
 ```
+
+This command will recreate the Cloud Function and then the `*.zip` reference will be updated.
 
 ## References
 
