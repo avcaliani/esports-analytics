@@ -11,6 +11,7 @@
   - [Cloud Function](#cloud-function)
   - [Terraform Configuration](#terraform-configuration)
   - [Data Pipeline](#data-pipeline)
+  - [Deleting Resources](#deleting-resources)
 - [References](#references)
 
 ## About
@@ -20,8 +21,6 @@ TODO: Include a description here!
 TODO: Add the project architecture here!
 TODO: Add Sandbox Link!
 ```
-
----
 
 ## Hands On
 
@@ -93,11 +92,6 @@ terraform apply
 ```
 
 After creating the cloud resources using terraform, you can check logs about executions and resources in Google Cloud console.  
-Finally, if you want to **delete** the project and all the resources create by terraform, you can simply execute...
-
-```bash
-terraform destroy
-```
 
 > 💡 More Terraform commands in [this](https://gist.github.com/avcaliani/4a68c1fdfe5132288ebea1819bdfa23f) tutorial.
 
@@ -108,18 +102,33 @@ In this project our data pipeline was developed using [Apache Spark] and the dat
 
 More details about the pipeline, like how to execute it, can be found in this [README](data-pipelines/brawl-stars/README.md)
 
----
+## Deleting Resources
+
+Finally, if you want to **delete** the project and all the resources create by terraform, you can simply execute...
+
+```bash
+cd terraform && terraform destroy
+```
+
+Then, delete Big Query data.
+
+```bash
+cd data-pipelines/brawl-stars && make delete-resource
+```
+
+Finally, do not forget to delete the manual buckets you have created in the beginning.
 
 ## References
 
-- 🪐 **Google Cloud**
+- 🌎 **Google Cloud**
   - [CLI - Initialization Guide](https://cloud.google.com/sdk/docs/initializing)
   - [CLI - Application Default Credentials]
 
-- 🌱 **Terraform**
+- 🌳 **Terraform**
   - [How to trigger a Cloud Function with Cloud Scheduler?](https://medium.com/geekculture/setup-gcp-cloud-functions-triggering-by-cloud-schedulers-with-terraform-1433fbf1abbe)
   - [How to create static outbund IP for Cloud Functions?](https://shashwotrisal.medium.com/how-to-create-a-static-outbound-ip-for-google-cloud-functions-using-terraform-a8e9b30074b6)
   - [How to use Secrets in Cloud Functions?](https://www.cloudreach.com/en/technical-blog/utilizing-gcp-secret-manager-secrets-in-cloud-functions-with-terraform/)
+  - [How to recreate a resource using Terraform?](https://stackoverflow.com/a/70773865)
 
 [Apache Spark]: https://spark.apache.org
 [CLI - Application Default Credentials]: https://cloud.google.com/docs/authentication/application-default-credentials
