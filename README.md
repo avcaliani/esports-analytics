@@ -16,11 +16,9 @@
 
 ## About
 
-```bash
-TODO: Include a description here!  
-TODO: Add the project architecture here!
-TODO: Add Sandbox Link!
-```
+![architecture](.docs/architecture.png)
+
+Here it goes the [nootebook](https://gist.github.com/avcaliani/38702f216cf414c5831a04e7169d7300) exploring Brawl Stars API.
 
 ## Hands On
 
